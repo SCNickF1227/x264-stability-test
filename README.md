@@ -7,7 +7,7 @@ This script leverages the x264-64 tool to perform a CPU stability test, simulati
 This is the spiritual successor to the Overclock.net community Bash script [Which Originally appeared in the Haswell Overclocking guide nearly a decade ago!](https://www.overclock.net/threads/haswell-overclocking-guide-with-statistics.1411077/page-737#post-22689780)
 
 Join the conversation of my personal overclocking journey with a 7900X3D
-https://forum.level1techs.com/t/one-man-s-adventure-in-ryzen-7900x3d-overclocking/201144/7
+https://forum.level1techs.com/t/one-man-s-adventure-in-ryzen-7900x3d-overclocking/201144
 ## 🚀 Features
 
 ### **Preset Thread Allocation for Stress Testing**
