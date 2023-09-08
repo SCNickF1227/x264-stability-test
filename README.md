@@ -4,6 +4,8 @@
 
 This script leverages the x264-64 tool to perform a CPU stability test, simulating different workloads by varying the number of threads involved in the processing. It has been designed to work in a Windows environment using Python 3.11.
 
+This is the spiritual successor to the Overclock.net community Bash script [Which Originally appeared in the Haswell Overclocking guide nearly a decade ago!](https://www.overclock.net/threads/haswell-overclocking-guide-with-statistics.1411077/page-737#post-22689780)
+
 ## 🚀 Features
 
 ### **Preset Thread Allocation for Stress Testing**
