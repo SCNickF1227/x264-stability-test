@@ -47,6 +47,14 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 3. Place a ~2 minute video file named `test-1080p.mp4` in the `test` directory, adjacent to the script.
 4. Clone or download the script to your local system.
 
+Ensure your diretory structure looks like this!
+📂 x264_stability_test/
+├── 📝 README.md - Your guide to using and contributing to the project.
+├── 🐍 x264_stability_test.py - The main script to perform CPU stress tests.
+└── 📁 test/
+  ├── 🎬 test-1080p.mp4 - Video file used during the testing process.
+  └── 🖥️ x264-64.exe - Executable necessary to conduct the stability tests.
+
 ## 🚀 Usage
 
 To execute the script, run the following command in your command prompt or terminal:
