@@ -1,3 +1,7 @@
+##########################################################################################
+Including old-style readme from the previous version of this script from the OCN community.
+##########################################################################################
+
 Changelog for x264 Stability Test v3.00 BETA
 
 Key Differences:
