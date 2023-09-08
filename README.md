@@ -48,6 +48,7 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 4. Clone or download the script to your local system.
 
 Ensure your diretory structure looks like this!
+
 📂 x264_stability_test/
 
 ├── 📝 README.md - Your guide to using and contributing to the project.
