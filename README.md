@@ -37,7 +37,7 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 
 - Python 3.x
 - Windows OS
-- x264-64 tool installed and accessible from the command line
+- x264-64 tool ensure it's named `x264-64.exe` and in the `test` directory
 - Test video file (`test-1080p.mp4`) available in the `test` directory
 
 ## 📥 Installation
