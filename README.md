@@ -14,10 +14,31 @@ https://forum.level1techs.com/t/one-man-s-adventure-in-ryzen-7900x3d-overclockin
 
 The script performs stress tests using pre-defined thread allocations to emulate different workload conditions. Here are the different scenarios tested:
 
-- **Maximum Threads**: Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
-- **Half Threads**: Employs half of the specified maximum threads (rounded down) to simulate moderately multithreaded workloads.
-- **Quarter Threads**: Engages a quarter of the maximum threads (rounded down) for testing under lighter multithreaded conditions.
-- **Minimal Threads**: In the final stage, a minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
+#### 1. Maximum Threads
+- **Loops**: 10
+- **Threads Used**: `max_threads`, as specified by the user
+- **Description**: 
+  Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
+
+#### 2. Half Threads
+- **Loops**: 10
+- **Threads Used**: `max_threads // 2`
+- **Description**:
+  Employs half of the specified maximum threads (rounded down) to simulate moderately multithreaded workloads.
+
+#### 3. Quarter Threads
+- **Loops**: 10
+- **Threads Used**: `max_threads // 4`
+- **Description**:
+  Engages a quarter of the maximum threads (rounded down) for testing under lighter multithreaded conditions.
+
+#### 4. Minimal Threads
+- **Loops**: 20
+- **Threads Used**: 2
+- **Description**:
+  In the final stage, a minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
+
+### Script Workflow
 
 Each scenario presents a different level of stress on the CPU, aiming to ensure stability under various potential workloads.
 
