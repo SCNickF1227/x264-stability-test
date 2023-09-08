@@ -1,0 +1,96 @@
+Changelog for x264 Stability Test v3.00 BETA
+
+Key Differences:
+- This version includes a Python script to handle the x264 stability test rather than a batch file used in the previous versions. 
+- The script dynamically ascertains the maximum, half, and quarter thread values based on the user input, enhancing the adaptability of the test to different hardware settings.
+- Enhanced logging functionalities are incorporated, allowing for detailed logging of each loop with precise timestamps.
+- Logs now also capture the version details of the x264 tool directly within the script, ensuring that users always have detailed context for each test run.
+- The new cleanup function ensures that unnecessary files are removed after the test, maintaining a cleaner working directory.
+- The script ends by opening the directory containing the log file, giving users immediate access to the detailed logs generated during the run.
+- Added Python exception handling to better catch and log potential errors during the execution of the script, aiding in troubleshooting and ensuring the robustness of the script.
+- The enhanced structure and readability of the Python script make it easier to maintain and update in the future.
+
+USAGE:
+- Run the script using a Python 3 interpreter. The script has been migrated from a batch file to a Python script to leverage the powerful features and simplicity of Python.
+- The script prompts users for various inputs, including the maximum number of threads to be used, and dynamically calculates half and quarter thread values based on this input.
+- Users can now specify a custom name for the log file, providing greater flexibility in organizing test results.
+
+LOGGING:
+- Log details include the x264 tool version and detailed loop information with precise timestamps, providing comprehensive data for analyzing the stability test results.
+- Log files are automatically moved to the parent directory at the end of the test, keeping the working directory clean and ensuring easy access to log files after the test.
+
+CLOSING THE TEST:
+- The test can be closed normally at the end of the execution. Additionally, users have the option to open the directory containing the log files directly from the script, facilitating quick access to the test results.
+
+Please refer to the Python script for further details on the changes implemented in this version and for guidance on how to execute the stability test using the new Python script.
+
+
+x264 Stability Test v2.06
+9/15/2015
+=========================
+This is the x264 bench that has been modified by members of Overclock.net (Angelotti, JackyCY, Dark_wizzie).
+This test is for stress testing CPU overclocks.
+
+Key Features:
+- Ability to set how many passes you want.
+- Ability to pick priority.
+- Ability to change thread count.
+- Logging functionality that logs up until the point of the crash.
+- Self-contained package that is simple to use and does not require the user to download other programs to function.
+- Removed first pass, which was useless for stress testing.
+
+
+USAGE:
+Don't use any exes in the test folder. The file to use is "x264 Stability Test.bat".
+
+The more threads you choose to use, the harder the test will be. This remains true for any CPU, even those that can't use anywhere close to 16 threads. 
+Changing the priority of the test is not really recommended, as it can make your computer lag like crazy for next to no gain.
+
+In general I recommend running normal priority + 16 threads. Run it overnight as you sleep. If it's still running when you wake, consider the test passed.
+
+
+LOGGING:
+Logs are stored in the test folder. It should still be there even if you crashed. You can see how many loops you've passed before crashing.
+
+
+CLOSING THE TEST:
+Press "CTRL" and "Pause". It will ask if you wish to terminate the program. Type in the letter "Y" and press enter.
+
+
+
+
+=========================
+Changelog 
+
+v2.06
+-------------
+Readme has been amended and includes more foolproof instructions.
+EXE renamed.
+EXE now strongly recommends 16 threads.
+x264 encoder is now version 19-Aug-2015 20:52.
+
+v2.05
+-------------
+x264 version is printed by the exe itself and when someone updates their x264 exe it will show the correct version
+Revised configuration and CLI
+POPD instead of "cd.."
+Names are defined as variables, easy to change at one place
+All options listed for priority except realtime that should rather not be used
+Results are generated on the fly, continuously and are not lost when test crashes due to bad OC
+Results show loop start time and one can find how long it ran before a crash, equal to command line output
+Crashed logs are deleted on a new start and not appended to
+Parametrized options, easy to create predefined configs with shortcuts and batches using the optional parameters
+Added help for parameters -h, --help
+Infinity now works instead of a number of loops as well
+Fixed loop counter when running infinite test
+Readme has been cleaned
+
+v2.04
+------------
+cosmetic polish of code nothing more, default values used if you hit enter when asked for config values
+
+v1
+--------------
+Changed the video file. 27.4Mbps, 1920 x 1040 (as opposed to the previous one 1920 x 800), also with high motion and high quality grain (rich details).
+Changed encode settings. These settings generate a larger output file (in MB) than the source.
+Updated x264 binaries to r2431
