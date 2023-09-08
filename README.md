@@ -43,23 +43,18 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 ## 📥 Installation
 
 1. Ensure Python 3.x is installed on your system. Download it from the [Python official website](https://www.python.org/).
-2. Download the latest x264-64 tool and ensure it's named `x264-64.exe` and in the `test` directory, adjacent to the script. [VideoLAN x264 Binaries] (https://artifacts.videolan.org/x264/)
+2. Download the latest x264-64 tool and ensure it's named `x264-64.exe` and placed in the `test` directory, adjacent to the script. [VideoLAN x264 Binaries](https://artifacts.videolan.org/x264/)
 3. Place a ~2 minute video file named `test-1080p.mp4` in the `test` directory, adjacent to the script.
 4. Clone or download the script to your local system.
 
-Ensure your diretory structure looks like this!
+Ensure your directory structure looks like this:
 
-📂 x264_stability_test/
-
-├── 📝 README.md - Your guide to using and contributing to the project.
-
-├── 🐍 x264_stability_test.py - The main script to perform CPU stress tests.
-
-└── 📁 test/
-
-  ├── 🎬 test-1080p.mp4 - Video file used during the testing process.
-
-  └── 🖥️ x264-64.exe - Executable necessary to conduct the stability tests.
+- 📂 **x264_stability_test/**
+  - 📝 **README.md** - Your guide to using and contributing to the project.
+  - 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.
+  - 📁 **test/**
+      - 🎬 **test-1080p.mp4** - Video file used during the testing process.
+      - 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
 
 ## 🚀 Usage
 
