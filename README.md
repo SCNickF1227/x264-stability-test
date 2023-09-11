@@ -75,11 +75,12 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 Ensure your directory structure looks like this:
 
 📂 **x264_stability_test/**
-> 📝 **README.md** - Your guide to using and contributing to the project.
-> 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.
-> 📁 **test/**
->> 🎬 **test-1080p.mp4** - Video file used during the testing process.
->> 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
+|-- 📝 **README.md** - Your guide to using and contributing to the project.
+|-- 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.
+|-- 📁 **test/**
+    |------ 🎬 **test-1080p.mp4** - Video file used during the testing process.
+    |------ 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
+
 
 ## 🚀 Usage
 
