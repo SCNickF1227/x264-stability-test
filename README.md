@@ -80,7 +80,7 @@ Ensure your directory structure looks like this:
 |-- 📁 **test/**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;|---- 🎬 **test-1080p.mp4** - Video file used during the testing process.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;|---- 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;|---- 🖥 **config.json** - Stores configuration between runs.
+&nbsp;&nbsp;&nbsp;&nbsp;|---- 📝 **config.json** - Stores configuration between runs.
 ## 🚀 Usage
 
 To execute the script, run the following command in your command prompt or terminal:
