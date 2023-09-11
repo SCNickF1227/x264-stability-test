@@ -1,0 +1,14 @@
+{
+    "max_threads": 72,
+    "half_threads": 36,
+    "quarter_threads": 18,
+    "eighth_threads": 9,
+    "loops_list": [
+        1,
+        1,
+        1,
+        1,
+        1
+    ],
+    "minimal_threads": 2
+}
