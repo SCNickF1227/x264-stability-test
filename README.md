@@ -92,9 +92,9 @@ python3 x264_stability_test.py
 
 ## :older_man: It may be wise to use a number larger than the maximum thread count for your CPU. 
 
-- You may benefit from an increase of 33%-50% in maxium thread allocation vs the number of threads available on your system.
+- You may benefit from an increase of 33%-50% in maxium thread allocation vs the number of threads available on your system. As an example, I saw >5% CPU utilization growth from 24 to 32 cores on my 7900X3D. 
 - *New BETA 2 version, it's better to have 400% as I work to make the script more heavily workload dynamic.*
-As an example, I saw >5% CPU utilization growth from 24 to 32 cores on my 7900X3D. 
+
 
 ## Configuration File
 
