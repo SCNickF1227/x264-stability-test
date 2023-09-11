@@ -15,7 +15,7 @@ https://forum.level1techs.com/t/one-man-s-adventure-in-ryzen-7900x3d-overclockin
 The script performs stress tests using pre-defined thread allocations to emulate different workload conditions. Here are the different scenarios tested:
 
 #### 1. Maximum Threads
-- **Loops**: 10
+- **Loops**: 10 
 - **Threads Used**: `max_threads`, as specified by the user
 - **Description**: 
   Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
@@ -37,6 +37,38 @@ The script performs stress tests using pre-defined thread allocations to emulate
 - **Threads Used**: 2
 - **Description**:
   In the final stage, a minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
+  
+### Configuration File
+
+To tailor the stability test to specific needs and preferences, a configuration file in JSON format has been introduced in this version. This file allows users to configure various settings including loop and thread counts, enhancing the flexibility and customization of the stress tests.
+
+Here's how it works:
+
+#### **Creating and Modifying the Configuration File**
+- **Location**: Ensure that the configuration file is located in the root directory of the script.
+- **Format**: The configuration file must adhere to a valid JSON format. 
+- **Parameters**: Define key parameters such as `max_threads`, `loops`, among others to suit your testing requisites.
+- **Error Handling**: The script is designed to gracefully handle errors by notifying the user and automatically deleting incorrectly formatted configuration files, maintaining a seamless user experience.
+
+#### **Sample Configuration**
+```
+{
+    "max_threads": 32,
+    "loops": 10,
+    "thread_allocations": {
+        "maximum": 32,
+        "half": 16,
+        "quarter": 8,
+        "minimal": 2
+    }
+}
+```
+In the above sample, various thread allocations are defined to represent different testing scenarios. Modify these values as per your CPU capabilities and testing goals.
+
+**Notes**
+Backup: Before making substantial changes, it is recommended to keep a backup of your configuration file to prevent data loss from inadvertent errors.
+Documentation: Refer to the script's documentation to understand the range and acceptable values for each parameter, helping in crafting a configuration that aligns with your objectives.
+Leverage the configuration file to fine-tune your stability tests, achieving a balance between rigor and resource allocation, and obtaining results that are most pertinent to your setup.
 
 ### Script Workflow
 
