@@ -1,4 +1,4 @@
-# x264-64 CPU Stability Test Script v3.00 BETA 
+# x264-64 CPU Stability Test Script v3.00 BETA 2
 
 ## Overview
 
@@ -74,13 +74,12 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 
 Ensure your directory structure looks like this:
 
-📂 **x264_stability_test/**
-|-- 📝 **README.md** - Your guide to using and contributing to the project.
-|-- 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.
-|-- 📁 **test/**
-    |------ 🎬 **test-1080p.mp4** - Video file used during the testing process.
-    |------ 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
-
+📂 **x264_stability_test/**<br>
+|-- 📝 **README.md** - Your guide to using and contributing to the project.<br>
+|-- 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.<br>
+|-- 📁 **test/**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- 🎬 **test-1080p.mp4** - Video file used during the testing process.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|-- 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
 
 ## 🚀 Usage
 
