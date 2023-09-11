@@ -19,6 +19,7 @@ The script performs stress tests using pre-defined thread allocations to emulate
 - **Threads Used**: `max_threads`, as specified by the user
 - **Description**: 
   Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
+>:older_man: It may be wise to use a number larger than the maximum thread count for your CPU. **You may benefit from an increase of 33%-50% in maxium thread allocation vs the number of threads available on your system.** As an example, I saw >5% CPU utilization growth from 24 to 32 cores on my 7900X3D. 
 
 #### 2. Half Threads
 - **Loops**: 10
