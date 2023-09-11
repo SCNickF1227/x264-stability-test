@@ -79,7 +79,7 @@ Ensure your directory structure looks like this:
 |-- 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.<br>
 |-- 📁 **test/**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;|---- 🎬 **test-1080p.mp4** - Video file used during the testing process.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;|---- 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
+&nbsp;&nbsp;&nbsp;&nbsp;|---- 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;|---- 🖥 **config.json** - Stores configuration between runs.
 ## 🚀 Usage
 
