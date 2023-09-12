@@ -35,10 +35,10 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 
 ## 🛠 Requirements
 
-- Python 3.x
-- Windows OS
-- x264-64 tool ensure it's named `x264-64.exe` and in the `test` directory
-- Test video file (`test-1080p.mp4`) available in the `test` directory
+- Python 3.x. You can use [My setup Script](https://github.com/SCNickF1227/x264-stability-test/blob/v3.0-BETA-3/test/setup.python.md)
+- Windows 10,11
+- x264-64 tool ensure it's named `x264-64.exe` and in the `test` directory. It is provide here in the release.
+- Test video file (`test-1080p.mp4`) available in the `test` directory. You can use [my download script](https://github.com/SCNickF1227/x264-stability-test/blob/v3.0-BETA-3/test/dl_bbb.py) to get Big Buck Bunny, Royalty Free
 
 ## 📥 Installation
 
