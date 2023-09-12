@@ -28,8 +28,7 @@ This Python script facilitates the downloading of files from a specified URL to 
 
 ## Customization
 
-To download a different file, modify the `url` variable in the script with the desired file's URL. Also, update the `destination_filename` variable to specify the name under which the file should be saved locally.
-
+To download a different file, modify the `url` variable in the script with the desired file's URL. Also, update the `destination_filename` variable to specify the name under which the file should be saved locally. We are assuming `test-1080p.mp4`.
 ## Troubleshooting
 
 - Ensure that the URL specified in the `url` variable is correct and accessible.
