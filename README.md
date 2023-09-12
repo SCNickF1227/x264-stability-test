@@ -1,4 +1,4 @@
-# x264-64 CPU Stability Test Script v3.00 BETA 2
+# x264-64 CPU Stability Test Script v3.00 BETA 3
 
 ## Overview
 
