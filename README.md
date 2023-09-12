@@ -15,29 +15,35 @@ https://forum.level1techs.com/t/one-man-s-adventure-in-ryzen-7900x3d-overclockin
 The script performs stress tests using pre-defined thread allocations to emulate different workload conditions. Here are the different scenarios tested:
 
 #### 1. Maximum Threads
-- **Loops**: 10 
+- **Loops**: :large_blue_diamond: Configurable, Default 1
 - **Threads Used**: `max_threads`, as specified by the user
 - **Description**: 
   Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
 
 #### 2. Half Threads
-- **Loops**: 10
+- **Loops**: :large_blue_diamond: Configurable, Default 1
 - **Threads Used**: `max_threads // 2`
 - **Description**:
   Employs half of the specified maximum threads (rounded down) to simulate moderately multithreaded workloads.
 
 #### 3. Quarter Threads
-- **Loops**: 10
+- **Loops**: :large_blue_diamond: Configurable, Default 1
 - **Threads Used**: `max_threads // 4`
 - **Description**:
   Engages a quarter of the maximum threads (rounded down) for testing under lighter multithreaded conditions.
 
 #### 4. Minimal Threads
-- **Loops**: 20
+- **Loops**: :large_blue_diamond: Configurable, Default 1
 - **Threads Used**: 2
 - **Description**:
-  In the final stage, a minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
-  
+  A minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
+
+#### 5. Maximum Threads
+- **Loops**: :large_orange_diamond: Not Configurable, Same number of loops as other Maxium Threads.
+- **Threads Used**: `max_threads`, as specified by the user
+- **Description**: 
+  Generate some heat before ending the stability test.
+
 ### Script Workflow
 
 Each scenario presents a different level of stress on the CPU, aiming to ensure stability under various potential workloads.
@@ -46,9 +52,13 @@ Each scenario presents a different level of stress on the CPU, aiming to ensure 
 
 Each test iteration logs detailed reports into a specified log file, capturing both standard output and errors during execution to facilitate a comprehensive review post testing.
 
+:red_circle: Now includes better sampling and statistics. 
+
 ### **Automatic File Cleanup**
 
 Upon completion of the test, the script automatically removes all temporary files created during the test process, maintaining a clean working environment.
+
+:red_circle: Fixed some bugs relating to improper cleanup
 
 ### **Interactive Input**
 
@@ -90,6 +100,40 @@ python3 x264_stability_test.py
 
 ```
 
+## :older_man: It may be wise to use a number larger than the maximum thread count for your CPU. 
+
+- :speech_balloon: You may benefit from an increase of 3-4x in maxium thread allocation vs the number of threads available on your system. This is an intentional design decision to allow better scaling, and to allow better variation of load on high-core-count CPUs.  
+
+
+
+## Configuration File
+
+To tailor the stability test to specific needs and preferences, a configuration file in JSON format has been introduced in this version. This file allows users to configure various settings including loop and thread counts, enhancing the flexibility and customization of the stress tests.
+
+Here's how it works:
+
+### **Creating and Modifying the Configuration File**
+- **Location**: Ensure that the configuration file is located in the root directory of the script.
+- **Format**: The configuration file must adhere to a valid JSON format. 
+- **Parameters**: Define key parameters such as `max_threads`, `loops`, among others to suit your testing requisites.
+- **Error Handling**: The script is designed to gracefully handle errors by notifying the user and automatically deleting incorrectly formatted configuration files, maintaining a seamless user experience.
+
+### **Sample Configuration**
+```
+{    "max_threads": 72,
+    "half_threads": 36,
+    "quarter_threads": 18,
+    "eighth_threads": 9,
+    "loops_list": [
+        1,
+        1,
+        1,
+        1,
+        1
+    ],
+    "minimal_threads": 2
+}
+```
 ## 🤝 Contribution
 
 Contributions are welcome! Feel free to provide feedback, suggest improvements, or propose new features to enhance the script’s functionality.
