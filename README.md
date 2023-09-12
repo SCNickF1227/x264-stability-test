@@ -62,8 +62,8 @@ Upon completion of the test, the script automatically removes all temporary file
 
 ### **Interactive Input**
 
-Users are guided through the setup process with intuitive prompts to specify critical inputs such as maximum thread count and log file naming, ensuring a user-friendly experience.
-:large_blue_diamond: No More Detailed and still easir to use.
+Users are guided through the setup process with intuitive prompts to specify critical inputs such as maximum thread count and log file naming, ensuring a user-friendly experience.<br>
+:large_blue_diamond: Now More Detailed and still easier to use.
 
 ### **Version Display**
 
