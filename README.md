@@ -1,19 +1,44 @@
-# x264-64 CPU Stability Test Script v3.00 BETA 
+# x264-64 CPU Stability Test Script v3.00 BETA 2
 
 ## Overview
 
 This script leverages the x264-64 tool to perform a CPU stability test, simulating different workloads by varying the number of threads involved in the processing. It has been designed to work in a Windows environment using Python 3.11.
 
+This is the spiritual successor to the Overclock.net community batch script [Which Originally appeared in the Haswell Overclocking guide nearly a decade ago!](https://www.overclock.net/threads/haswell-overclocking-guide-with-statistics.1411077/page-737#post-22689780)
+
+Join the conversation of my personal overclocking journey with a 7900X3D
+https://forum.level1techs.com/t/one-man-s-adventure-in-ryzen-7900x3d-overclocking/201144
 ## 🚀 Features
 
 ### **Preset Thread Allocation for Stress Testing**
 
 The script performs stress tests using pre-defined thread allocations to emulate different workload conditions. Here are the different scenarios tested:
 
-- **Maximum Threads**: Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
-- **Half Threads**: Employs half of the specified maximum threads (rounded down) to simulate moderately multithreaded workloads.
-- **Quarter Threads**: Engages a quarter of the maximum threads (rounded down) for testing under lighter multithreaded conditions.
-- **Minimal Threads**: In the final stage, a minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
+#### 1. Maximum Threads
+- **Loops**: 10 
+- **Threads Used**: `max_threads`, as specified by the user
+- **Description**: 
+  Utilizes the full number of threads specified by the user, aiming to test the CPU's capacity under heavy multithreaded workloads.
+
+#### 2. Half Threads
+- **Loops**: 10
+- **Threads Used**: `max_threads // 2`
+- **Description**:
+  Employs half of the specified maximum threads (rounded down) to simulate moderately multithreaded workloads.
+
+#### 3. Quarter Threads
+- **Loops**: 10
+- **Threads Used**: `max_threads // 4`
+- **Description**:
+  Engages a quarter of the maximum threads (rounded down) for testing under lighter multithreaded conditions.
+
+#### 4. Minimal Threads
+- **Loops**: 20
+- **Threads Used**: 2
+- **Description**:
+  In the final stage, a minimal setup using 2 threads is engaged to scrutinize the stability under minimal multithreaded conditions.
+  
+### Script Workflow
 
 Each scenario presents a different level of stress on the CPU, aiming to ensure stability under various potential workloads.
 
@@ -49,13 +74,13 @@ At initiation, the script displays the x264-64 tool version, providing users wit
 
 Ensure your directory structure looks like this:
 
-📂 **x264_stability_test/**
-> 📝 **README.md** - Your guide to using and contributing to the project.
-> 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.
-> 📁 **test/**
->> 🎬 **test-1080p.mp4** - Video file used during the testing process.
->> 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.
-
+📂 **x264_stability_test/**<br>
+|-- 📝 **README.md** - Your guide to using and contributing to the project.<br>
+|-- 🐍 **x264_stability_test.py** - The main script to perform CPU stress tests.<br>
+|-- 📁 **test/**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|---- 🎬 **test-1080p.mp4** - Video file used during the testing process.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|---- 🖥️ **x264-64.exe** - Executable necessary to conduct the stability tests.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;|---- 📝 **config.json** - Stores configuration between runs.
 ## 🚀 Usage
 
 To execute the script, run the following command in your command prompt or terminal:
